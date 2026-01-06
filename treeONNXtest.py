@@ -4,6 +4,7 @@ import numpy as np
 import onnxruntime as ort
 from PIL import Image
 import cv2
+import io
 
 #just reuse our transforms:
 
@@ -71,28 +72,28 @@ class TreeClassifier:
         self.std = np.array([0.229, 0.224, 0.225]).astype(np.float32)
 
 
-    def preprocess(self, imgPth):
-        
-        #TODO: for now load relies on a path, for future use we want to use FASTAPI uploadfile
-        img = Image.open(imgPth).convert('RGB')
+    def preprocess(self, imgInput):
+        # Check if we got a path string or raw bytes
+        if isinstance(imgInput, str):
+            # It's a path! Open it from disk
+            img = Image.open(imgInput).convert('RGB')
+        else:
+            # It's bytes! Open from memory
+            img = Image.open(io.BytesIO(imgInput)).convert('RGB')
         
         img = self.letterbox(img)
-
-        #transform to np arr since CLAHE expects that
         img = self.Clahe(img)
 
-        #normalize by dividing by 255 (scale 0 - 1 then subtract mean/ std)
         imgNp = np.array(img).astype(np.float32) / 255.0
         imgNp = (imgNp - self.mean) / self.std
 
-        #final prep is to covert HCW (clahe did this) back to CHW and add batch dims
-        imgNp = imgNp.transpose(2, 0, 1)  # (3, 320, 320)
-        imgNp = np.expand_dims(imgNp, axis=0)  # (1, 3, 320, 320)
+        imgNp = imgNp.transpose(2, 0, 1)
+        imgNp = np.expand_dims(imgNp, axis=0)
 
         return imgNp
 
-    def predict(self, imgPth):
-        inputData = self.preprocess(imgPth)
+    def predict(self, fileBytes):
+        inputData = self.preprocess(fileBytes)
         
         #run the model
         #outputs are returned as a list of numpy arrs
@@ -109,11 +110,3 @@ class TreeClassifier:
 
         return self.class_names[classIdx], confidence 
     
-
-#EXEC
-classes = ['Acer palmatum', 'Cedrus deodara', 'Celtis sinensis', 'Cinnamomum camphora (Linn) Presl', 'Elaeocarpus decipiens', 'Flowering cherry', 'Ginkgo biloba', 'Koelreuteria paniculata', 'Lagerstroemia indica', 'Liquidambar formosana', 'Liriodendron chinense', 'Magnolia grandiflora L', 'Magnolia liliflora Desr', 'Michelia chapensis', 'Osmanthus fragrans', 'Photinia serratifolia', 'Platanus', 'Prunus cerasifera f. atropurpurea', 'Salix babylonica', 'Sapindus saponaria', 'Styphnolobium japonicum', 'Triadica sebifera', 'Zelkova serrata']
-tester = TreeClassifier("treeModel.onnx", classes)
-#pick out an image from data
-label, confidence = tester.predict(r"data\tree\test\Michelia chapensis\Michelia chapensis_tree_1 (72).JPG")
-
-print(f"Pred: {label} | Conf: {confidence:.2%}")
