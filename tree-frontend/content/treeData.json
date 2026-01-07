@@ -1,0 +1,94 @@
+{
+  "Acer palmatum": {
+    "common": "Japanese Maple",
+    "facts": "Famous for its hand-shaped leaves, it has been cultivated in Japan for centuries and is a symbol of elegance."
+  },
+  "Cedrus deodara": {
+    "common": "Deodar Cedar",
+    "facts": "The national tree of Pakistan, its name comes from Sanskrit meaning 'Timber of the Gods'."
+  },
+  "Celtis sinensis": {
+    "common": "Chinese Hackberry",
+    "facts": "The small round fruits are edible and were historically used by children as ammunition for bamboo pea shooters."
+  },
+  "Cinnamomum camphora (Linn) Presl": {
+    "common": "Camphor Tree",
+    "facts": "Every part of this tree smells like camphor; it is an evergreen that can live for over 1,000 years."
+  },
+  "Elaeocarpus decipiens": {
+    "common": "Lily of the Valley Tree",
+    "facts": "It gets its name from its fragrant, bell-shaped white flowers that bloom in early summer."
+  },
+  "Flowering cherry": {
+    "common": "Sakura",
+    "facts": "In many cultures, the brief blooming period of the cherry blossom symbolizes the fleeting nature of life."
+  },
+  "Ginkgo biloba": {
+    "common": "Maidenhair Tree",
+    "facts": "Often called a 'living fossil,' it is the only remaining species in its entire biological division."
+  },
+  "Koelreuteria paniculata": {
+    "common": "Goldenrain Tree",
+    "facts": "After its yellow flowers fall like 'rain,' it grows papery seed pods that look like tiny pink lanterns."
+  },
+  "Lagerstroemia indica": {
+    "common": "Crape Myrtle",
+    "facts": "Commonly known as the '100-day flower' because its vibrant blooms last all through the summer."
+  },
+  "Liquidambar formosana": {
+    "common": "Chinese Sweetgum",
+    "facts": "The resin from this tree is used in traditional medicine, and its leaves turn a deep purple-red in autumn."
+  },
+  "Liriodendron chinense": {
+    "common": "Chinese Tulip Tree",
+    "facts": "The leaves are shaped like a traditional Chinese jacket (Magua), and the flowers look like green tulips."
+  },
+  "Magnolia grandiflora L": {
+    "common": "Southern Magnolia",
+    "facts": "This tree produces some of the largest flowers in the world, which can be up to 12 inches across."
+  },
+  "Magnolia liliflora Desr": {
+    "common": "Mulan Magnolia",
+    "facts": "The purple, lily-like flowers usually appear on bare branches before the leaves emerge in spring."
+  },
+  "Michelia chapensis": {
+    "common": "Joy Perfume Tree",
+    "facts": "Its flowers are incredibly fragrant and are often used in high-end perfumes and essential oils."
+  },
+  "Osmanthus fragrans": {
+    "common": "Sweet Osmanthus",
+    "facts": "The tiny flowers produce a scent so strong it can be smelled from a long distance; they are also used to scent tea."
+  },
+  "Photinia serratifolia": {
+    "common": "Taiwan Photinia",
+    "facts": "The new leaves emerge as a brilliant, fiery red before eventually turning green as they mature."
+  },
+  "Platanus": {
+    "common": "Plane Tree",
+    "facts": "Known for its 'camouflage' bark that flakes off, allowing the tree to shed pollutants and breathe in smoggy cities."
+  },
+  "Prunus cerasifera f. atropurpurea": {
+    "common": "Purple-leaf Plum",
+    "facts": "One of the few trees that keeps dark, reddish-purple leaves throughout the entire growing season."
+  },
+  "Salix babylonica": {
+    "common": "Weeping Willow",
+    "facts": "The flexible branches were once used to make baskets. Its bark contains salicin, which is chemically similar to aspirin."
+  },
+  "Sapindus saponaria": {
+    "common": "Soapberry",
+    "facts": "The berries contain saponins, a natural detergent. They can be used as a soap substitute for washing clothes."
+  },
+  "Styphnolobium japonicum": {
+    "common": "Japanese Pagoda Tree",
+    "facts": "Once planted at Buddhist temples, its dried flower buds are used in China as a yellow dye for fine silks."
+  },
+  "Triadica sebifera": {
+    "common": "Chinese Tallow",
+    "facts": "The seeds are covered in a thick layer of white vegetable tallow (wax) used for making soap and candles."
+  },
+  "Zelkova serrata": {
+    "common": "Japanese Zelkova",
+    "facts": "Highly prized for bonsai, this tree is known for its graceful, fan-like shape and saw-toothed leaves."
+  }
+}
